@@ -1,0 +1,10 @@
+CREATE DATABASE todo_db;
+
+\c todo_db;
+
+CREATE TABLE todos (
+    id SERIAL PRIMARY KEY,
+    title TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    completed BOOLEAN DEFAULT FALSE
+);
