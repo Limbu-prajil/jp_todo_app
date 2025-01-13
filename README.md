@@ -9,26 +9,32 @@ A simple Todo Manager Web Application built with:
 This application allows users to:
 - Create new todo items
 - View a list of all existing todos
+- Complete or Uncomplete a todo
+- Delete a todo
 
 ---------------------------------------------------------------------
 
 ** Project Structure **
 
-todo-root/
-├── py_backend/
-│   ├── server.py       # Python server
-│   ├── schema.sql      # Database schema
-│   ├── setup.py        # Pip installable setup
-├── js_frontend/
+jp-todoapp/
+├── backend/
+│   ├── todo_backend.egg-info  # Manage backend dependencies
+│   ├── server.py              # Python server
+│   ├── schema.sql             # Database schema
+│   ├── setup.py               # Pip installable setup
+├── frontend/
 │   ├── src/
-│   │   ├── App.tsx     # Main React Component
-│   │   ├── index.css   # CSS for UI
-│   │   ├── main.tsx    # Entry point for React
-│   ├── package.json    # Frontend dependencies
-│   ├── tsconfig.json   # TS config
-│   ├── vite.config.ts  # Vite config
-│   ├── index.html      # HTML template for UI
-└── README.md           # Project documentation
+│   │   ├── App.tsx            # Main React Component
+│   │   ├── index.css          # CSS for UI
+│   │   ├── main.tsx           # Entry point for React
+│   ├── package.json           # Frontend dependencies
+│   ├── tsconfig.json          # TS config
+│   ├── vite.config.ts         # Vite config
+│   ├── index.html             # HTML template for UI
+│   ├── eslint.config.js       # ESLint config
+│   ├── README.md              # Frontend documentation
+│   ├── others                 # Other json files
+└── README.md                  # Project documentation
 
 ---------------------------------------------------------------------
 
@@ -46,7 +52,7 @@ todo-root/
 
  3. Start the backend server:
 
-  > python app.py
+  > python server.py
 
  The backend server will run at: `http://localhost:8000`
 
@@ -54,7 +60,7 @@ todo-root/
 
  1. Access PostgreSQL CLI:
 
-  > psql -U your_user
+  > psql -U postgres
 
  2. Create the database:
 
@@ -91,7 +97,7 @@ todo-root/
 
   > npm run dev
 
- The frontend server will run at: `http://localhost:5173`
+  The frontend server will run at: `http://localhost:5173`
 
 ---------------------------------------------------------------------
 
@@ -104,9 +110,10 @@ todo-root/
  - The existing todo items will automatically load.
 
 3. Add a Todo:
- - Type a task in the input field and click "Add Todo".  
+ - Type a task in the input field and click "Add Todo".
+ - Add a valid todo unless you are bored ( empty todos are also accepted :-() )  
 
-   The task is sent to backend and immediately displayed on the list.
+  The task is sent to backend, the backend updates the database, sends response to frontend and gets immediately displayed on the list.
 
 ---------------------------------------------------------------------
 
@@ -120,8 +127,9 @@ todo-root/
 
 ** Key Features **
 
-- REST API (GET /todos, POST /todos) for backend communication.
+- REST API (POST /todos, GET /todos, PUT /todos, DELETE /todos) for backend communication.
 - State management in React with hooks (useState, useEffect).
+- Python built-in http server
 - Secure and efficient database connection using psycopg2.
 - Clean separation of backend and frontend logic.
 
@@ -130,9 +138,12 @@ todo-root/
 ** Testing **
 
 1. Backend API Testing: Use tools like curl or Postman.
+ Postman
  - Test GET /todos endpoint.
  - Test POST /todos with a JSON payload:
     {"title": "Test Task"}
+ Curl
+ - curl 'http://localhost:8000'
 
 2. Frontend Testing:
  - Verify todos are displayed correctly.
