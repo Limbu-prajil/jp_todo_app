@@ -16,23 +16,23 @@ This application allows users to:
 
 ** Project Structure **
 
-jp-todoapp/
---- backend/
-------- server.py              # Python server
-------- schema.sql             # Database schem
-------- requirements.txt       # Pip install file
---- frontend/
-------- src/
------------ App.tsx            # Main React Component
------------ index.css          # CSS for UI
------------ main.tsx           # Entry point for React
-------- package.json           # Frontend dependencies
-------- tsconfig.json          # TS config
-------- vite.config.ts         # Vite config
-------- index.html             # HTML template for UI
-------- eslint.config.js       # ESLint config
-------- others                 # Other json files
---- README.md                  # Project documentation
+/jp-todoapp/
+   backend/
+      server.py              # Python server
+      schema.sql             # Database schem
+      requirements.txt       # Pip install file
+   frontend/
+      src/
+         App.tsx             # Main React Component
+         index.css           # CSS for UI
+         main.tsx            # Entry point for React
+      package.json           # Frontend dependencies
+      tsconfig.json          # TS config
+      vite.config.ts         # Vite config
+      index.html             # HTML template for UI
+      eslint.config.js       # ESLint config
+      others                 # Other json files
+   README.md                 # Project documentation
 
 ---------------------------------------------------------------------
 
