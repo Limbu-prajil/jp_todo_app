@@ -18,15 +18,15 @@ This application allows users to:
 
 jp-todoapp/
 |-- backend/
-|   |-- todo_backend.egg-info  # Manage backend dependencies
 |   |-- server.py              # Python server
 |   |-- schema.sql             # Database schem
-|   |-- setup.py               # Pip installable setup
+|   |-- requirements.txt               # Pip installable file
 |-- frontend/
 |   |-- src/
 |   |   |-- App.tsx            # Main React Component
 |   |   |-- index.css          # CSS for UI
 |   |   |-- main.tsx           # Entry point for React
+|   |   |-- vite-env.d.ts      # vite client reference
 |   |-- package.json           # Frontend dependencies
 |   |-- tsconfig.json          # TS config
 |   |-- vite.config.ts         # Vite config
@@ -48,7 +48,7 @@ jp-todoapp/
 
  2. Install dependencies:
 
-  > pip install psycopg2
+  > pip install -r requirements.txt
 
  3. Start the backend server:
 
@@ -119,7 +119,7 @@ jp-todoapp/
 
 ** Tech Stack **
 
-- Backend: Python (http.server) + PostgreSQL + psycopg2
+- Backend: Python (http.server) + psycopg2
 - Frontend: React + Vite + TypeScript
 - Database: PostgreSQL
 
