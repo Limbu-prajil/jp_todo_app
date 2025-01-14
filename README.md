@@ -8,8 +8,8 @@ A simple Todo Manager Web Application built with:
 
 This application allows users to:
 - Create new todo items
-- View a list of all existing todos
-- Complete or Uncomplete a todo
+- Read all existing todos
+- Update a todo as complete or uncomplete
 - Delete a todo
 
 ---------------------------------------------------------------------
@@ -18,8 +18,9 @@ This application allows users to:
 ```
 jp-todoapp/
 |-- backend/
+|-- |-- venv                   # virtual environment 
 |   |-- server.py              # Python server
-|   |-- setup_db.sql             # Database schema
+|   |-- setup_db.sql           # Database schema
 |   |-- requirements.txt       # Pip installable file
 |-- frontend/
 |   |-- src/
@@ -65,7 +66,7 @@ jp-todoapp/
 
   > CREATE DATABASE todos_db;
 
- 3. Switch to the new database:
+ 3. Switch to the created database:
 
   > \c todos_db;
 
@@ -82,7 +83,7 @@ jp-todoapp/
   > INSERT INTO todos (title) VALUES ('Sample Task');
     SELECT * FROM todos;
 
-- FRONTEND Setup (Vite + TypeScript)
+- FRONTEND Setup (React + Vite + TypeScript)
 
  1. Navigate to the frontend directory:
 
@@ -129,18 +130,19 @@ jp-todoapp/
 - REST API (POST /todos, GET /todos, PUT /todos, DELETE /todos) for backend communication.
 - State management in React with hooks (useState, useEffect).
 - Python built-in http server
-- Secure and efficient database connection using psycopg2.
-- Clean separation of backend and frontend logic.
+- Backend database connection using psycopg2.
+- Separate schema and pip installation files
 
 ---------------------------------------------------------------------
 
 # Testing #
 
 1. Backend API Testing: Use tools like curl or Postman.
+ 
  Postman
  - Test GET /todos endpoint.
- - Test POST /todos with a JSON payload:
-    {"title": "Test Task"}
+ - Test POST /todos with a JSON payload: {"title": "Test Task"}
+ 
  Curl
  - curl `http://localhost:8000`
 
