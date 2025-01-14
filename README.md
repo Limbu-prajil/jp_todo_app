@@ -1,6 +1,6 @@
 ## Todo Manager Web Application ##
 
-** Overview **
+# Overview #
 
 A simple Todo Manager Web Application built with:
 - Backend: Python (http.server) + PostgreSQL + psycopg2  
@@ -14,13 +14,13 @@ This application allows users to:
 
 ---------------------------------------------------------------------
 
-** Project Structure **
+# Project Structure #
 ```
 jp-todoapp/
 |-- backend/
 |   |-- server.py              # Python server
-|   |-- schema.sql             # Database schem
-|   |-- requirements.txt               # Pip installable file
+|   |-- setup_db.sql             # Database schema
+|   |-- requirements.txt       # Pip installable file
 |-- frontend/
 |   |-- src/
 |   |   |-- App.tsx            # Main React Component
@@ -32,13 +32,12 @@ jp-todoapp/
 |   |-- vite.config.ts         # Vite config
 |   |-- index.html             # HTML template for UI
 |   |-- eslint.config.js       # ESLint config
-|   |-- README.md              # Frontend documentation
 |   |-- others                 # Other json files
 |-- README.md                  # Project documentation
 ```
 ---------------------------------------------------------------------
 
-** Setup Instructions **
+# Setup Instructions #
 
 - BACKEND Setup
 
@@ -72,7 +71,7 @@ jp-todoapp/
 
  4. Run the schema file to create tables:
 
-  > \i /path/to/schema.sql;
+  > \i /path/to/setup_db.sql;
 
  5. Verify table creation:
 
@@ -101,7 +100,7 @@ jp-todoapp/
 
 ---------------------------------------------------------------------
 
-** Usage **
+# Usage #
 
 1. Open the frontend application in your browser:  
 `http://localhost:5173`
@@ -117,7 +116,7 @@ jp-todoapp/
 
 ---------------------------------------------------------------------
 
-** Tech Stack **
+# Tech Stack #
 
 - Backend: Python (http.server) + psycopg2
 - Frontend: React + Vite + TypeScript
@@ -125,7 +124,7 @@ jp-todoapp/
 
 ---------------------------------------------------------------------
 
-** Key Features **
+# Key Features #
 
 - REST API (POST /todos, GET /todos, PUT /todos, DELETE /todos) for backend communication.
 - State management in React with hooks (useState, useEffect).
@@ -135,7 +134,7 @@ jp-todoapp/
 
 ---------------------------------------------------------------------
 
-** Testing **
+# Testing #
 
 1. Backend API Testing: Use tools like curl or Postman.
  Postman
