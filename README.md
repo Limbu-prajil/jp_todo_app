@@ -20,7 +20,7 @@ jp-todoapp/
 |-- backend/
 |   |-- todo_backend.egg-info  # Manage backend dependencies
 |   |-- server.py              # Python server
-|   |-- schema.sql             # Database schema
+|   |-- schema.sql             # Database schem
 |   |-- setup.py               # Pip installable setup
 |-- frontend/
 |   |-- src/
