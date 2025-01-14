@@ -47,7 +47,6 @@ jp_todo_app/
 
  2. Install dependencies:
 
-  > pip install psycopg2
   > pip install -r requirements.txt
 
  3. Start the backend server:
