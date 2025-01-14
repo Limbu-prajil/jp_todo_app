@@ -15,7 +15,7 @@ This application allows users to:
 ---------------------------------------------------------------------
 
 ** Project Structure **
-
+```
 jp-todoapp/
 |-- backend/
 |   |-- server.py              # Python server
@@ -35,7 +35,7 @@ jp-todoapp/
 |   |-- README.md              # Frontend documentation
 |   |-- others                 # Other json files
 |-- README.md                  # Project documentation
-
+```
 ---------------------------------------------------------------------
 
 ** Setup Instructions **
