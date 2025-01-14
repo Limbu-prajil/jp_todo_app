@@ -17,24 +17,24 @@ This application allows users to:
 ** Project Structure **
 
 jp-todoapp/
-├── backend/
-│   ├── todo_backend.egg-info  # Manage backend dependencies
-│   ├── server.py              # Python server
-│   ├── schema.sql             # Database schema
-│   ├── setup.py               # Pip installable setup
-├── frontend/
-│   ├── src/
-│   │   ├── App.tsx            # Main React Component
-│   │   ├── index.css          # CSS for UI
-│   │   ├── main.tsx           # Entry point for React
-│   ├── package.json           # Frontend dependencies
-│   ├── tsconfig.json          # TS config
-│   ├── vite.config.ts         # Vite config
-│   ├── index.html             # HTML template for UI
-│   ├── eslint.config.js       # ESLint config
-│   ├── README.md              # Frontend documentation
-│   ├── others                 # Other json files
-└── README.md                  # Project documentation
+|-- backend/
+|   |-- todo_backend.egg-info  # Manage backend dependencies
+|   |-- server.py              # Python server
+|   |-- schema.sql             # Database schema
+|   |-- setup.py               # Pip installable setup
+|-- frontend/
+|   |-- src/
+|   |   |-- App.tsx            # Main React Component
+|   |   |-- index.css          # CSS for UI
+|   |   |-- main.tsx           # Entry point for React
+|   |-- package.json           # Frontend dependencies
+|   |-- tsconfig.json          # TS config
+|   |-- vite.config.ts         # Vite config
+|   |-- index.html             # HTML template for UI
+|   |-- eslint.config.js       # ESLint config
+|   |-- README.md              # Frontend documentation
+|   |-- others                 # Other json files
+|-- README.md                  # Project documentation
 
 ---------------------------------------------------------------------
 
@@ -143,27 +143,10 @@ jp-todoapp/
  - Test POST /todos with a JSON payload:
     {"title": "Test Task"}
  Curl
- - curl 'http://localhost:8000'
+ - curl `http://localhost:8000`
 
 2. Frontend Testing:
  - Verify todos are displayed correctly.
  - Check that adding a new task updates the list instantly.
 
 ---------------------------------------------------------------------
-
-** Contributing **
-
-1. Fork the repository.
-2. Create a feature branch:
-
-> git checkout -b feature-branch
-
-3. Commit changes:
-
-> git commit -m "Add new feature"
-
-4. Push changes:
-
-> git push origin feature-branch
-
-5. Open a Pull Request.
