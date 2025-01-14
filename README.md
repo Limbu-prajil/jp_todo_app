@@ -1,6 +1,7 @@
-## Todo Manager Web Application ##
+## TODO MANAGER WEB APP ##
 
-** Overview **
+
+## Overview ##
 
 A simple Todo Manager Web Application built with:
 - Backend: Python (http.server) + PostgreSQL + psycopg2  
@@ -14,29 +15,29 @@ This application allows users to:
 
 ---------------------------------------------------------------------
 
-** Project Structure **
-
-/jp-todoapp/
-   backend/
-      server.py              # Python server
-      schema.sql             # Database schem
-      requirements.txt       # Pip install file
-   frontend/
-      src/
-         App.tsx             # Main React Component
-         index.css           # CSS for UI
-         main.tsx            # Entry point for React
-      package.json           # Frontend dependencies
-      tsconfig.json          # TS config
-      vite.config.ts         # Vite config
-      index.html             # HTML template for UI
-      eslint.config.js       # ESLint config
-      others                 # Other json files
-   README.md                 # Project documentation
-
+## Project Structure ##
+```
+jp_todo_app/
+|-- backend/
+|---- server.py           # Python server
+|---- schema.sql          # Database schema
+|---- requirements.txt    # Pip install file
+|-- frontend/
+|---- src/
+|------- App.tsx          # Main React Component
+|------- index.css        # CSS for UI
+|------- main.tsx         # Entry point for React
+|---- package.json        # Frontend dependencies
+|---- tsconfig.json       # TS config
+|---- vite.config.ts      # Vite config
+|---- index.html          # HTML template for UI
+|---- eslint.config.js    # ESLint config
+|---- others              # Other json files
+|-- README.md             # Project documentation
+```
 ---------------------------------------------------------------------
 
-** Setup Instructions **
+## Setup Instructions ##
 
 - BACKEND Setup
 
@@ -47,6 +48,7 @@ This application allows users to:
  2. Install dependencies:
 
   > pip install psycopg2
+  > pip install -r requirements.txt
 
  3. Start the backend server:
 
@@ -99,7 +101,7 @@ This application allows users to:
 
 ---------------------------------------------------------------------
 
-** Usage **
+## Usage ##
 
 1. Open the frontend application in your browser:  
 `http://localhost:5173`
@@ -115,7 +117,7 @@ This application allows users to:
 
 ---------------------------------------------------------------------
 
-** Tech Stack **
+## Tech Stack ##
 
 - Backend: Python (http.server) + PostgreSQL + psycopg2
 - Frontend: React + Vite + TypeScript
@@ -123,7 +125,7 @@ This application allows users to:
 
 ---------------------------------------------------------------------
 
-** Key Features **
+## Key Features ##
 
 - REST API (POST /todos, GET /todos, PUT /todos, DELETE /todos) for backend communication.
 - State management in React with hooks (useState, useEffect).
@@ -133,7 +135,7 @@ This application allows users to:
 
 ---------------------------------------------------------------------
 
-** Testing **
+## Testing ##
 
 1. Backend API Testing: Use tools like curl or Postman.
  Postman
